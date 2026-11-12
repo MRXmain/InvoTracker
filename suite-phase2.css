@@ -1,0 +1,36 @@
+/* InvoTracker Phase 2: compact responsive suite. CSS only. */
+:root{--ui-blue:#1976d2;--ui-soft:#edf6ff;--ui-line:#dfe9f2;--ui-text:#18364e}
+.dashboardContent{padding-bottom:18px!important}
+.sidebar{scrollbar-width:thin;scrollbar-color:#4b6680 transparent}
+.sidebarLink{display:flex!important;align-items:center!important;gap:9px!important}
+.suiteTopbar{position:sticky!important;top:0!important;z-index:20!important}
+.welcome{padding-top:4px!important}
+.mybillbook-actions{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.mybillbook-actions button{min-width:0!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.stats.suiteKpis{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important}
+.stats.suiteKpis article{min-width:0!important;min-height:78px!important;padding:13px 14px!important}
+.stats.suiteKpis article strong{font-size:clamp(17px,1.5vw,22px)!important;overflow-wrap:anywhere!important}
+.suiteDashboardGrid,.suite-dashboard-grid{align-items:stretch!important}
+.panel{min-width:0!important;overflow-wrap:anywhere}
+.panel p{line-height:1.5!important}
+/* Payment alert values should never break into stacked digits. */
+.suitePriorityPanel .stats,.suitePriorityPanel .alertStats,.suitePriorityPanel .priorityStats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+.suitePriorityPanel article,.suitePriorityPanel .stat,.suitePriorityPanel .alertCard{min-width:0!important;max-width:none!important}
+.suitePriorityPanel strong,.suitePriorityPanel b{font-size:clamp(15px,1.35vw,21px)!important;overflow-wrap:normal!important;word-break:normal!important;white-space:normal!important}
+.suitePriorityPanel{min-width:0!important}
+.monthlyChartContainer{max-height:270px!important;min-height:205px!important}
+.monthlyChartContainer canvas{max-height:260px!important}
+/* Forms and business modules */
+.invoiceForm,.bb-sales-form{max-width:100%!important}
+.bb-form-card,.bb-payment-section,.invoice-items-editor{min-width:0!important}
+.bb-invoice-toolbar,.bb-items-toolbar{gap:8px!important;flex-wrap:wrap!important}
+.bb-invoice-summary{min-width:230px!important;max-width:100%!important}
+.bb-payment-grid{gap:10px!important}
+.suite-module,.suiteInventoryPanel,.it-inventory-panel,.it-product-form-panel{padding:15px!important}
+.sa-grid{gap:12px!important}
+.sa-card{border-radius:11px!important;min-width:0!important}
+button{transition:background-color .15s ease,border-color .15s ease!important}
+button:focus-visible,a:focus-visible{outline:3px solid #83c8ff!important;outline-offset:2px!important}
+@media(max-width:1200px){.stats.suiteKpis{grid-template-columns:repeat(3,minmax(0,1fr))!important}.mybillbook-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:780px){.stats.suiteKpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}.suiteTopbar{position:relative!important}.monthlyChartContainer{min-height:180px!important}.suitePriorityPanel .stats,.suitePriorityPanel .alertStats,.suitePriorityPanel .priorityStats{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:480px){.stats.suiteKpis article{padding:11px!important}.stats.suiteKpis article strong{font-size:17px!important}.mybillbook-actions button{white-space:normal!important}.panel{padding:12px!important}}

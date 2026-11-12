@@ -1,0 +1,10 @@
+/* Compact premium action buttons — preserve existing click handlers. */
+:root{--action-blue:#0284c7}
+.suiteQuickActions .suiteActionGrid{display:flex!important;flex-wrap:wrap!important;justify-content:flex-start!important;align-items:center!important;gap:9px!important}
+.suiteQuickActions .suiteActionGrid>a{display:inline-flex!important;flex:0 0 auto!important;width:auto!important;min-width:0!important;max-width:100%!important;min-height:36px!important;padding:8px 15px!important;border-radius:9px!important;font-size:12px!important;font-weight:650!important;line-height:1.25!important;text-align:center!important;white-space:nowrap!important}
+#bbQuickCreate{min-height:38px!important;padding:9px 12px!important;border-radius:9px!important;font-size:12px!important}
+.innovation-actions{display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important}
+.innovation-actions button,.innovation-actions a{flex:0 0 auto!important;width:auto!important;min-height:36px!important;padding:8px 14px!important;border-radius:9px!important;font-size:12px!important}
+#copilotPanel button{width:auto!important;max-width:100%!important;border-radius:10px!important}
+#copilotPanel .ai-example{min-height:34px!important;padding:7px 12px!important;font-size:12px!important}
+@media(max-width:560px){.suiteQuickActions .suiteActionGrid>a{white-space:normal!important}.suiteQuickActions .suiteActionGrid{gap:7px!important}}

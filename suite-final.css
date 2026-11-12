@@ -1,0 +1,19 @@
+/* InvoTracker final UI: phase 4 + phase 5. Non-invasive presentation layer. */
+:root{--it-blue:#0ea5e9;--it-blue-deep:#0284c7;--it-ink:#1e293b;--it-line:#dbe7f1;--it-bg:#f3f8fd;--it-radius:13px}
+html{scroll-behavior:smooth}body{background:var(--it-bg);color:var(--it-ink)}
+button,input,select,textarea{font:inherit}button{transition:background-color .16s ease,box-shadow .16s ease,transform .16s ease}button:not(:disabled):active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #7dd3fc;outline-offset:2px}
+#app main,#app .main-content{min-width:0}#app section{min-width:0}
+#contactsPage,#productsPage,#analyticsPage,#reportsPage,#invoicesPage,#purchaseBillsPage,#quotationsPage,#businessSettingsPage,#partyLedgerPage{max-width:100%;min-width:0}
+#contactsPage table,#productsPage table,#invoicesPage table,#reportsPage table,#partyLedgerPage table{border-collapse:separate;border-spacing:0;width:100%}
+#contactsPage th,#productsPage th,#invoicesPage th,#reportsPage th,#partyLedgerPage th{background:#eff8ff;color:#334155;font-size:.82rem;font-weight:750;letter-spacing:.012em}
+#contactsPage th,#productsPage th,#invoicesPage th,#reportsPage th,#partyLedgerPage th,#contactsPage td,#productsPage td,#invoicesPage td,#reportsPage td,#partyLedgerPage td{padding:10px 12px;border-bottom:1px solid #e7edf5;text-align:left}
+#contactsPage tbody tr:hover,#productsPage tbody tr:hover,#invoicesPage tbody tr:hover,#reportsPage tbody tr:hover,#partyLedgerPage tbody tr:hover{background:#f7fbff}
+#productsPage input,#productsPage select,#contactsPage input,#contactsPage select,#businessSettingsPage input,#businessSettingsPage select,#createInvoicePage input,#createInvoicePage select{min-height:38px;border-radius:9px}
+#productsPage .card,#contactsPage .card,#analyticsPage .card,#reportsPage .card,#businessSettingsPage .card,#purchaseBillsPage .card,#quotationsPage .card{border:1px solid var(--it-line);border-radius:var(--it-radius);box-shadow:0 3px 15px #0f477008}
+#analyticsPage canvas,#dashboardHome canvas{max-width:100%}#dashboardHome .card{min-width:0}
+#itProductFormPanel[hidden],#itSalesBody[hidden]{display:none!important}
+.it-final-tag{display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border:1px solid #bae6fd;border-radius:999px;background:#f0f9ff;color:#0369a1;font-size:11px;font-weight:700;white-space:nowrap}
+@media(max-width:1000px){#dashboardHome,#analyticsPage,#productsPage,#contactsPage{max-width:100%}#createInvoicePage .bb-sales-form{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:720px){body{overflow-x:hidden}#app{min-width:0}#dashboardHome,#analyticsPage,#productsPage,#contactsPage,#invoicesPage,#createInvoicePage{padding-left:10px!important;padding-right:10px!important}#dashboardHome .card,#analyticsPage .card{min-width:0}#contactsPage table,#productsPage table,#invoicesPage table{font-size:12px}#contactsPage th,#productsPage th,#invoicesPage th,#contactsPage td,#productsPage td,#invoicesPage td{padding:8px 7px}#createInvoicePage .bb-sales-form{display:block!important}#createInvoicePage .bb-form-card{margin-bottom:12px}dialog.bb-invoice-dialog{max-width:96vw;max-height:94vh}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+@media print{nav,aside,button,.bb-dialog-actions,.it-final-tag{display:none!important}body{background:white!important}#bbPreviewBody{color:#111!important}}

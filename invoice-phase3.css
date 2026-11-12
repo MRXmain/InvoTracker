@@ -1,0 +1,24 @@
+/* Phase 3: compact invoice workspace, scoped to editor only */
+#createInvoicePage{--p3blue:#0284c7;--p3line:#dbeafe;--p3ink:#0f172a;color:var(--p3ink)}
+#createInvoicePage>h2{font-size:1.45rem;margin:10px 0 4px}
+#createInvoicePage>p{margin:0 0 12px;color:#64748b;font-size:.88rem}
+#createInvoicePage .bb-invoice-toolbar{position:sticky;top:0;z-index:25;background:#f8fbffeb;backdrop-filter:blur(12px);padding:10px 12px;border:1px solid var(--p3line);border-radius:12px;display:flex;justify-content:space-between;gap:8px}
+#createInvoicePage .bb-sales-form{gap:12px;align-items:start}
+#createInvoicePage .bb-form-card,#createInvoicePage .invoice-items-editor,#createInvoicePage .bb-payment-section{border:1px solid var(--p3line);border-radius:14px;background:white;box-shadow:0 3px 14px #0f172a09;padding:16px}
+#createInvoicePage h3{font-size:1rem;margin:0 0 12px;color:#075985}
+#createInvoicePage label{font-size:.81rem;font-weight:600;color:#334155;gap:5px}
+#createInvoicePage input,#createInvoicePage select,#createInvoicePage textarea{min-height:37px;border-radius:8px;border:1px solid #cbd5e1;background:#fff;color:#0f172a;padding:8px 10px;box-sizing:border-box}
+#createInvoicePage input:focus,#createInvoicePage select:focus,#createInvoicePage textarea:focus{outline:2px solid #7dd3fc;outline-offset:1px;border-color:#0284c7}
+#createInvoicePage button{border-radius:9px;min-height:36px}
+#createInvoicePage .primary,#createInvoicePage button[type=submit]{background:#0284c7;color:white}
+#createInvoicePage .pos-entry{border-color:#dbeafe!important;background:#f8fbff;padding:12px!important}
+#createInvoicePage .pos-entry p{font-size:.8rem}
+#createInvoicePage #quickProductSearch,#createInvoicePage #phase3CustomerSearch{width:100%;margin:5px 0 8px}
+#createInvoicePage #invoiceItemTotals{position:sticky;bottom:0;z-index:15;background:#e0f2fe;color:#075985;font-weight:700;padding:12px;border:1px solid #7dd3fc;border-radius:10px}
+#createInvoicePage .innovation-card{padding:12px 16px;margin-bottom:12px}
+#createInvoicePage .innovation-card textarea{min-height:62px}
+#createInvoicePage .bb-payment-grid{gap:10px}
+#bbInvoiceDialog{max-width:min(900px,96vw);max-height:94vh;border-radius:16px;border:1px solid #bae6fd;padding:20px;background:white;color:#0f172a}
+#bbInvoiceDialog::backdrop{background:#0f172a99}
+@media(max-width:760px){#createInvoicePage .bb-sales-form{display:block}#createInvoicePage .bb-form-card,#createInvoicePage .invoice-items-editor,#createInvoicePage .bb-payment-section{margin-bottom:12px;padding:12px}#createInvoicePage .bb-invoice-toolbar{top:0}#createInvoicePage .bb-invoice-toolbar button{font-size:.78rem}}
+@media print{#createInvoicePage .bb-invoice-toolbar,#createInvoicePage .innovation-card{display:none!important}}

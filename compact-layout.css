@@ -1,0 +1,28 @@
+/* InvoTracker UI Refresh — visual-only overrides; no API or handler changes */
+:root{--bb-navy:#112840;--bb-navy2:#193752;--bb-purple:#1683db;--bb-purple2:#086dbb;--bb-ink:#18324a;--bb-muted:#647b90;--bb-stroke:#dfebf4;--bb-canvas:#f4f9fd;--bb-lilac:#e7f4ff;--studio-accent:#1683db;--brand-blue:#1683db;--studio-bg:#f4f9fd;--sidebar-bg:#112840}
+html{font-size:13px}body{background:#f4f9fd!important;color:#18324a!important;font-family:Inter,'Segoe UI',Arial,sans-serif!important}
+.dashboardLayout{background:#f4f9fd!important;gap:0!important}
+.sidebar{background:linear-gradient(180deg,#102940,#153b58)!important;padding:17px 10px!important;box-shadow:3px 0 18px #0a304010!important}
+.sidebarBrand{font-size:21px!important;letter-spacing:-.6px!important;margin:0 8px 21px!important}
+.sidebarNav{gap:2px!important}.sidebarLink{border-radius:8px!important;padding:10px 11px!important;font-size:12.5px!important;min-height:39px!important;transition:background .15s,color .15s!important}
+.sidebarLink:hover{background:#ffffff19!important}.sidebarLink.active{background:#228ee2!important;color:white!important;box-shadow:0 4px 12px #001a3022!important}
+.navIcon{width:21px!important;font-size:17px!important}.bb-nav-section,.sidebarLabel{font-size:10px!important;letter-spacing:1.15px!important;margin:17px 10px 6px!important;color:#aac4d9!important}
+.bb-quick-create{background:#e7f5ff!important;color:#075f9f!important;border-radius:9px!important;font-weight:700!important;margin-bottom:13px!important}
+.dashboardContent{min-width:0!important;background:#f4f9fd!important}.suiteTopbar{background:#fff!important;border-bottom:1px solid #e3edf5!important;min-height:61px!important;padding:10px 23px!important;box-shadow:0 2px 10px #0d456009!important}
+.bb-top-search input{background:#f4f8fc!important;border:1px solid #e0ebf4!important;border-radius:9px!important;min-height:37px!important}
+.suitePlan{background:#e7f4ff!important;color:#0d6cad!important;border-radius:7px!important}.suiteAvatar{background:#1683db!important;color:#fff!important}
+.welcome{margin-bottom:12px!important;gap:12px!important}.welcome h1{font-size:23px!important;letter-spacing:-.7px!important}.eyebrow{color:#1683db!important;font-weight:700!important;font-size:10px!important}
+.bb-dashboard-heading{font-size:16px!important;font-weight:750!important;margin:12px 0!important}
+.mybillbook-actions{gap:8px!important;margin:10px 0 15px!important}.mybillbook-actions button{border-radius:8px!important;padding:9px 13px!important;min-height:36px!important;font-weight:650!important}
+.stats.suiteKpis{gap:12px!important;margin-bottom:16px!important}.stats.suiteKpis article{padding:16px!important;border:1px solid #e0ebf4!important;border-radius:12px!important;background:#fff!important;box-shadow:0 3px 12px #183d5908!important;min-height:93px!important}
+.stats.suiteKpis article span{font-size:11px!important;color:#647b90!important}.stats.suiteKpis article strong{font-size:23px!important;color:#123e60!important;letter-spacing:-.6px!important}
+.panel,.bb-form-card,.bb-payment-section{border:1px solid #e0ebf4!important;border-radius:12px!important;box-shadow:0 3px 14px #183d5908!important;background:#fff!important}
+.panel{padding:17px!important;margin-bottom:14px!important}.panel h2{font-size:16px!important;margin-bottom:10px!important}
+input,select,textarea{border-radius:8px!important;border-color:#d8e5ef!important}input:focus,select:focus,textarea:focus{outline:2px solid #a4d9ff!important;outline-offset:1px!important}
+button.primary,.primary{background:#1683db!important;border-radius:8px!important;box-shadow:none!important}button.primary:hover,.primary:hover{background:#086dbb!important}.secondary{border-radius:8px!important}
+table{border-collapse:separate!important;border-spacing:0!important;width:100%}th{background:#f2f8fc!important;color:#516c82!important;font-size:11px!important;text-transform:uppercase!important;letter-spacing:.35px!important}th,td{padding:10px 12px!important;border-bottom:1px solid #e8f0f6!important}tbody tr:hover{background:#f7fbfe!important}
+#invoiceForm{gap:11px!important}#invoiceForm .bb-form-card,#invoiceForm .bb-payment-section,#invoiceForm .invoice-items-editor{padding:14px!important;margin-block:0 11px!important}#invoiceForm h3{font-size:14px!important;margin:0 0 9px!important}#invoiceForm input,#invoiceForm select,#invoiceForm textarea{min-height:36px!important;padding:7px 10px!important}#invoiceForm label{gap:4px!important;margin-bottom:5px!important}#invoiceForm button{min-height:35px!important}
+#bbInvoiceDialog{max-width:min(920px,96vw)!important;border-radius:14px!important}
+@media(max-width:900px){.suiteTopbar{padding:9px 13px!important}.stats.suiteKpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}.panel{padding:13px!important}}
+@media(max-width:600px){.stats.suiteKpis{gap:8px!important}.stats.suiteKpis article{min-height:76px!important;padding:12px!important}.stats.suiteKpis article strong{font-size:19px!important}.mybillbook-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}.mybillbook-actions button{white-space:normal!important}.suiteTopbarRight .suitePlan{display:none!important}th,td{padding:8px!important}}
+@media(prefers-reduced-motion:reduce){.sidebarLink{transition:none!important}}

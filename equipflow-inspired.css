@@ -1,0 +1,58 @@
+/* EquipFlow-inspired original InvoTracker visual system. Presentation-only. */
+:root{--ef-ink:#e9e9ec;--ef-muted:#a6a4ae;--ef-plum:#ad7c9f;--ef-edge:rgba(198,192,204,.19);--ef-panel:#17171b;--ef-canvas:#202024;--ef-radius:17px;--ef-ease:cubic-bezier(.2,.75,.25,1)}
+#app{font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:-.008em}
+#app .dashboardLayout{gap:0}
+#app .sidebar{background:linear-gradient(165deg,#121319,#17151b 68%,#1c1720)!important;border-right:1px solid var(--ef-edge)!important}
+#app .sidebarBrand{font-size:22px!important;font-weight:800!important;letter-spacing:-.055em!important;margin-bottom:25px!important}
+#app .sidebarBrand span{color:#cba1b9!important}
+#app .bb-nav-section,#app .sidebarLabel{color:#938d9b!important;letter-spacing:.15em!important;font-size:10px!important;font-weight:750!important}
+#app .sidebarNav{display:flex;flex-direction:column;gap:3px}
+#app .sidebarLink{border:1px solid transparent!important;border-radius:12px!important;min-height:43px!important;padding:10px 12px!important;font-size:12.5px!important;font-weight:560!important;gap:11px!important;color:#c3bfcb!important}
+#app .sidebarLink .navIcon{display:grid;place-items:center;width:23px!important;height:23px!important;flex:0 0 23px!important;border-radius:7px;background:rgba(214,202,216,.075);color:#c5b4c6;font-size:13px!important}
+#app .sidebarLink:hover{background:rgba(208,170,197,.10)!important;border-color:rgba(208,170,197,.13)!important;color:#fff!important}
+#app .sidebarLink.active,#app .sidebarLink[aria-current=page]{background:linear-gradient(100deg,rgba(151,91,131,.32),rgba(135,97,122,.12))!important;border:1px solid rgba(203,154,188,.24)!important;box-shadow:0 5px 15px rgba(0,0,0,.08)!important;color:#fff!important}
+#app .sidebarLink.active .navIcon{background:rgba(204,153,187,.19)!important;color:#f2d3e5!important}
+#app .bb-quick-create{border-radius:12px!important;background:#e6dce4!important;color:#211a23!important;border:1px solid #e6dce4!important;font-weight:750!important;box-shadow:0 5px 17px rgba(0,0,0,.10)!important}
+#app .bb-quick-create:hover{background:#f5e9f0!important}
+#app .dashboardContent{min-width:0}
+#app .suiteTopbar{border-bottom:1px solid var(--ef-edge)!important;box-shadow:none!important;gap:20px!important}
+#app .suiteWorkspaceLabel{font-size:9px!important;letter-spacing:.17em!important}
+#app .suiteTopbar strong{letter-spacing:-.025em!important}
+#app .suitePlan,#app .ai-nav-badge{background:rgba(178,123,158,.14)!important;color:#dfb6d0!important;border:1px solid rgba(195,151,180,.23)!important;border-radius:20px!important}
+#app .bb-top-search{border-radius:13px!important;border:1px solid var(--ef-edge)!important}
+#app .bb-top-search:focus-within{border-color:rgba(210,157,194,.52)!important}
+#app .eyebrow{color:#bd91ae!important;letter-spacing:.17em!important;font-size:10px!important}
+#app .welcome h1{font-size:clamp(23px,2vw,31px)!important;font-weight:780!important;letter-spacing:-.045em!important}
+#app .bb-dashboard-heading{font-size:12px!important;font-weight:650!important;letter-spacing:.015em!important;margin:15px 0 10px!important}
+#app :is(.panel,.sa-card,.smartstock-box,.it-settings-group){border-radius:var(--ef-radius)!important;border-color:var(--ef-edge)!important;box-shadow:0 9px 30px rgba(0,0,0,.055)!important}
+#app .panel{overflow:visible}
+#app :is(.stats article,.suiteKpis article,.it-ledger-stats article){border-radius:15px!important;border:1px solid var(--ef-edge)!important;box-shadow:0 5px 18px rgba(0,0,0,.045)!important;position:relative;overflow:hidden}
+#app .suiteKpis article:before{content:'';position:absolute;top:0;left:17px;right:17px;height:2px;background:linear-gradient(90deg,#b484a6,transparent);opacity:.6}
+#app :is(.stats article,.suiteKpis article) span{font-size:11px!important;letter-spacing:.015em!important}
+#app :is(.stats article,.suiteKpis article) strong{font-variant-numeric:tabular-nums;letter-spacing:-.035em!important}
+#app :is(h2,h3){letter-spacing:-.035em!important;font-weight:750!important}
+#app :is(#monthlyRevenuePanel,#smartAlertsPanel,#dashboardInventoryHealth,#productsPage,#partyLedgerPage,#businessSettingsPage,#invoicesPage,#contactsPage) h2{display:flex;align-items:center;gap:10px}
+#app :is(#monthlyRevenuePanel,#smartAlertsPanel,#dashboardInventoryHealth,#productsPage,#partyLedgerPage,#businessSettingsPage,#invoicesPage,#contactsPage) h2:before{content:'◈';display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border-radius:9px;background:rgba(187,136,168,.12);border:1px solid rgba(187,136,168,.18);color:#c69cbb;font-size:14px}
+#app :is(button,.secondary,.primary){transition:background-color .18s var(--ef-ease),border-color .18s var(--ef-ease),transform .18s var(--ef-ease),box-shadow .18s var(--ef-ease)!important}
+#app button:not(.sidebarLink):not(.bb-quick-create){border-radius:10px!important}
+#app button:hover:not(:disabled){filter:brightness(1.06)}
+#app .tableWrap{border:1px solid var(--ef-edge)!important;border-radius:14px!important;overflow:auto!important}
+#app .tableWrap table{border-collapse:separate!important;border-spacing:0!important}
+#app .tableWrap th{background:rgba(160,145,163,.075)!important;font-size:10px!important;letter-spacing:.09em!important;text-transform:uppercase!important;font-weight:750!important;border-bottom:1px solid var(--ef-edge)!important;padding:13px 14px!important}
+#app .tableWrap td{font-size:12px!important;padding:13px 14px!important;border-bottom:1px solid rgba(180,169,183,.11)!important;vertical-align:middle!important}
+#app .tableWrap tbody tr:hover{background:rgba(187,145,171,.055)!important}
+#app .tableWrap tbody tr:last-child td{border-bottom:0!important}
+#app .tableWrap td button{border-radius:8px!important;min-height:29px!important;padding:5px 10px!important}
+#app :is(input,select,textarea){border-radius:10px!important;accent-color:#a66f96}
+#app :is(input,select,textarea):focus{border-color:#bd8cac!important;box-shadow:0 0 0 3px rgba(187,140,172,.14)!important}
+#app .suiteDashboardGrid{gap:16px!important}
+#app #smartAlertsPanel :is(.suiteAlertStats,.suiteAlertGrid,.smart-alert-stats){min-width:0!important}
+#app #smartAlertsPanel :is(article,.alert-card){min-width:0!important;overflow-wrap:normal!important;word-break:normal!important}
+#app #smartAlertsPanel strong{overflow-wrap:normal!important;word-break:normal!important;white-space:normal!important;font-size:clamp(14px,1.2vw,19px)!important}
+#app #smartAlertsPanel :is(.suiteAlertStats,.suiteAlertGrid){display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important}
+#app #smartAlertsPanel :is(.suiteAlertStats,.suiteAlertGrid)>*{padding:12px 10px!important}
+#app .it-settings-group{padding:clamp(14px,2vw,23px)!important}
+#app .floating-copilot-trigger{border:3px solid #d8b2cc!important;box-shadow:0 7px 24px rgba(110,54,91,.30)!important}
+@media(max-width:1050px){#app #smartAlertsPanel :is(.suiteAlertStats,.suiteAlertGrid){grid-template-columns:1fr!important}}
+@media(max-width:750px){#app .tableWrap table{min-width:650px}#app .suiteTopbar{gap:10px!important}#app .suiteKpis{gap:9px!important}}
+@media(prefers-reduced-motion:reduce){#app *{transition-duration:0s!important;animation-duration:0s!important}}

@@ -1,0 +1,53 @@
+/* InvoTracker micro-polish | presentation only; no API or event-handler changes */
+:root{--mp-radius:14px;--mp-hairline:rgba(132,151,184,.20);--mp-accent:#6988f1;--mp-ease:cubic-bezier(.2,.75,.2,1)}
+#app{font-feature-settings:'tnum' 1,'ss01' 1}
+#app :is(h1,h2,h3){letter-spacing:-.025em;line-height:1.3}
+#app :is(p,small){line-height:1.55}
+#app :is(button,a,input,select,textarea){-webkit-tap-highlight-color:transparent}
+#app :is(button,a,input,select,textarea):focus-visible{outline:2px solid #7f9eff!important;outline-offset:3px!important}
+#app :is(button,a){transition:background-color .17s var(--mp-ease),border-color .17s var(--mp-ease),box-shadow .17s var(--mp-ease),transform .17s var(--mp-ease)!important}
+#app button:not(.sidebarLink):not(.bb-quick-create){max-width:100%;overflow-wrap:normal}
+#app :is(button,.sidebarLink){cursor:pointer}
+#app :is(button,.sidebarLink):active{transform:translateY(1px)}
+#app :is(.sidebarLink,.bb-quick-create){border-radius:11px!important}
+#app .sidebarNav{padding-bottom:22px}
+#app .sidebarLink{min-height:40px!important;padding:10px 12px!important;display:flex;align-items:center;gap:11px;line-height:1.25}
+#app .sidebarLink .navIcon{width:19px;min-width:19px;display:inline-grid;place-items:center;font-size:14px}
+#app .sidebarLink:hover{background:rgba(116,145,229,.13)!important}
+#app .sidebarLink.active,#app .sidebarLink[aria-current="page"]{box-shadow:inset 3px 0 0 #8298ff!important}
+#app .bb-nav-section{padding-left:12px!important;margin-top:25px!important;margin-bottom:9px!important;letter-spacing:.13em!important}
+#app :is(.panel,.sa-card,.smartstock-box){border-radius:var(--mp-radius)!important}
+#app :is(.stats article,.it-ledger-stats article){border-radius:13px!important;transition:box-shadow .18s ease,border-color .18s ease!important}
+#app :is(.stats article,.it-ledger-stats article):hover{border-color:rgba(119,150,219,.38)!important;box-shadow:0 8px 24px rgba(0,0,0,.06)!important}
+#app :is(#productsPage,#invoicesPage,#contactsPage,#partyLedgerPage,#businessSettingsPage,#purchaseBillsPage,#quotationsPage,#analyticsPage,#reportsPage)>.tableWrap{margin-top:16px}
+#app .tableWrap{border:1px solid var(--mp-hairline)!important;border-radius:13px!important;overflow:auto;scrollbar-width:thin}
+#app .tableWrap table{width:100%;border-spacing:0;border-collapse:separate!important;font-variant-numeric:tabular-nums}
+#app .tableWrap th{font-size:10.5px!important;letter-spacing:.085em!important;text-transform:uppercase!important;font-weight:750!important;white-space:nowrap;padding:13px 14px!important;border-bottom:1px solid var(--mp-hairline)!important}
+#app .tableWrap td{padding:13px 14px!important;vertical-align:middle!important;border-bottom:1px solid rgba(128,150,184,.14)!important;font-size:12px!important;line-height:1.5!important}
+#app .tableWrap tbody tr:last-child td{border-bottom:0!important}
+#app .tableWrap tbody tr{transition:background .15s ease}
+#app .tableWrap tbody tr:hover{background:rgba(103,142,215,.065)!important}
+#app .tableWrap :is(td,th):first-child{padding-left:17px!important}
+#app .tableWrap :is(td,th):last-child{padding-right:17px!important}
+#app .tableWrap td button{min-height:29px!important;padding:5px 11px!important;border-radius:8px!important;font-size:11px!important;line-height:1.3!important;width:auto!important}
+#app :is(input,select,textarea){border-radius:10px!important;min-width:0;transition:border-color .15s ease,box-shadow .15s ease!important}
+#app :is(input,select,textarea):focus{border-color:#7d9df1!important;box-shadow:0 0 0 3px rgba(112,149,239,.12)!important}
+#app :is(.suite-module,.sa-card,#productsPage,#invoicesPage,#contactsPage,#partyLedgerPage,#businessSettingsPage) :is(h2,h3){margin-bottom:10px}
+#app :is(#productsPage,#invoicesPage,#contactsPage,#partyLedgerPage,#businessSettingsPage,#purchaseBillsPage,#quotationsPage) :is(button.primary,button.secondary){border-radius:10px!important}
+#app :is(#productsPage,#invoicesPage,#contactsPage,#partyLedgerPage,#businessSettingsPage,#purchaseBillsPage,#quotationsPage) button:not(.primary):not(.secondary){border-radius:9px!important}
+#app #productsPage .stats article{min-height:98px!important;padding:19px 21px!important}
+#app #productsPage .stats article strong{font-size:23px!important}
+#app #productsPage .tableWrap th,#app #productsPage .tableWrap td{padding-top:12px!important;padding-bottom:12px!important}
+#app #businessSettingsPage .it-settings-group{box-shadow:0 4px 16px rgba(0,0,0,.025)!important}
+#app #businessSettingsPage .it-group-mark{border-radius:11px!important}
+#app #businessSettingsPage .it-settings-fields label{font-size:12px!important;letter-spacing:.005em}
+#app #businessSettingsPage .it-settings-actions button{min-height:40px!important}
+#app #smartAlertsPanel :is(.suiteAlertStats,.suiteAlertGrid,.smart-alert-stats){min-width:0}
+#app #smartAlertsPanel :is(article,.alert-card){min-width:0;overflow-wrap:normal;word-break:normal}
+#app #smartAlertsPanel strong{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+#app #partyLedgerPage .it-ledger-filters{align-items:center}
+#app :is(#invoicesPage,#contactsPage,#productsPage,#partyLedgerPage) :is(.tableWrap,.stats){margin-bottom:12px}
+#app .ai-nav-badge{border-radius:6px!important;letter-spacing:.07em}
+#app #floatingCopilotButton,#app .floating-copilot-trigger{box-shadow:0 9px 24px rgba(27,64,143,.23)!important}
+@media (max-width:850px){#app .tableWrap{max-width:100%;overflow-x:auto}#app .tableWrap table{min-width:660px}#app #productsPage .stats article{padding:15px!important}}
+@media (prefers-reduced-motion:reduce){#app :is(button,a,input,select,textarea,.stats article){transition:none!important}}
