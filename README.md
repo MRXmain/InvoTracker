@@ -1,2 +1,1 @@
-# InvoTracker
-Multipurpose Invoice Tracking System
+A multipurpose Invoice & Business Management System built with Java, Spring Boot, MySQL, HTML, CSS & JavaScript. Manage invoices, GST, inventory, payments, and business operations with smart alerts, AI-powered assistance, fraud detection, and invoice scanning.
